@@ -7,14 +7,17 @@
 
 <string name="nav_item_home">Home</string>
 <string name="nav_item_schedule">Schedule</string>
+    <string name="nav_item_map">Map</string>
 
 
 <!-- navigation drawer item labels  -->
 <string-array name="nav_drawer_labels">
-    <item>@string/nav_item_home</item> 
+    <item>@string/nav_item_home</item>
     <item>@string/nav_item_schedule</item>
+    <item>@string/nav_item_map</item>
 </string-array>
 
 <string name="title_schedule">Schedule</string>
 <string name="title_home">Home</string>
+    <string name="title_map">Map</string>
 </resources>
