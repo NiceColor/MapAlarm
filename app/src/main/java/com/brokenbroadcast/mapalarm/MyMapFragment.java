@@ -19,6 +19,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.zip.Inflater;
@@ -26,10 +27,12 @@ import java.util.zip.Inflater;
 /**
  * Created by steven on 2/5/2016.
  */
-public class MyMapFragment extends Fragment{
-    private GoogleMap googleMap;
+public class MyMapFragment extends Fragment {
+
     private SupportMapFragment mSupportMapFragment;
-    private LatLng marker_latlng = new LatLng(49.2590910,-123.2139590);
+    private LatLng marker_latlng = new LatLng(49.2590910, -123.2139590);
+    private MarkerOptions second_marker;
+    private Marker dest;
 
 
     @Override
@@ -67,8 +70,16 @@ public class MyMapFragment extends Fragment{
                         googleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
                             @Override
                             public void onMapLongClick(LatLng point) {
-                                googleMap.addMarker(new MarkerOptions()
-                                        .position(point).title("new location").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+
+                                if (second_marker != null) {
+                                    dest.remove();
+                                }
+                                second_marker = new MarkerOptions().position(point)
+                                        .title("new location")
+                                        .icon(BitmapDescriptorFactory
+                                                .defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+                                dest = googleMap.addMarker(second_marker);
+
                             }
                         });
 
@@ -77,7 +88,7 @@ public class MyMapFragment extends Fragment{
                 }
             });
         }
-    return view;
+        return view;
     }
 
 
