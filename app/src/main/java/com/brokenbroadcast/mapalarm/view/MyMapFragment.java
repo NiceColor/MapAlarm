@@ -1,4 +1,4 @@
-package com.brokenbroadcast.mapalarm;
+package com.brokenbroadcast.mapalarm.view;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.brokenbroadcast.mapalarm.R;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;

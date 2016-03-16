@@ -1,4 +1,4 @@
-package com.brokenbroadcast.mapalarm;
+package com.brokenbroadcast.mapalarm.view;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.brokenbroadcast.mapalarm.R;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
 

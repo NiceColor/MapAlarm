@@ -1,4 +1,4 @@
-package com.brokenbroadcast.mapalarm;
+package com.brokenbroadcast.mapalarm.view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.brokenbroadcast.mapalarm.R;
 
 /**
  * Created by steven on 2/5/2016.

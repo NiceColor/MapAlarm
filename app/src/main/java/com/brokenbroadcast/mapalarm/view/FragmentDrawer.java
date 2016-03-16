@@ -1,4 +1,4 @@
-package com.brokenbroadcast.mapalarm;
+package com.brokenbroadcast.mapalarm.view;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.brokenbroadcast.mapalarm.R;
+import com.brokenbroadcast.mapalarm.model.NavigationDrawerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,13 +43,13 @@ public class FragmentDrawer extends Fragment {
         this.drawerListener = listener;
     }
 
-    public static List<NavDrawerItem> getData() {
-        List<NavDrawerItem> data = new ArrayList<>();
+    public static List<NavigationDrawerAdapter.NavDrawerItem> getData() {
+        List<NavigationDrawerAdapter.NavDrawerItem> data = new ArrayList<>();
 
 
         // preparing navigation drawer items
         for (int i = 0; i < titles.length; i++) {
-            NavDrawerItem navItem = new NavDrawerItem();
+            NavigationDrawerAdapter.NavDrawerItem navItem = new NavigationDrawerAdapter.NavDrawerItem();
             navItem.setTitle(titles[i]);
             data.add(navItem);
         }
